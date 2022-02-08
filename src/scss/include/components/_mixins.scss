@@ -1,0 +1,40 @@
+
+
+@mixin svg {
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+//=============================== Media Queries =============
+// Large tablets and desktops
+$screen-xl-max: 1680px;
+
+// Tablets and small desktops
+$screen-lg-max-2: 1440px;
+
+// Small tablets
+$screen-md-max: 1024px;
+
+// Extra large devices
+@mixin xl {
+  @media (max-width: #{$screen-xl-max}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (max-width: #{$screen-lg-max-2}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (max-width: #{$screen-md-max}) {
+    @content;
+  }
+}

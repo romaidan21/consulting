@@ -1,0 +1,159 @@
+section {
+  position: relative;
+  padding: 0 px2vw(160);
+  color: $black;
+}
+
+span.icons {
+  width: px2vw(120);
+  display: block;
+  @include svg;
+
+  @include lg{
+    width: 110px;
+  }
+
+  &.el-1 {
+    #el-1 {
+      fill: $purple;
+      stroke: none;
+    }
+  }
+
+  &.el-2 {
+    #el-2 {
+      fill: $redd;
+      stroke: none;
+    }
+  }
+
+  &.el-3 {
+    #el-3 {
+      fill: $yellow;
+      stroke: none;
+    }
+  }
+
+  &.el-4 {
+    #el-4 {
+      fill: $blue;
+      stroke: none;
+    }
+  }
+}
+
+.color-p {
+  color: $purple !important;
+
+}
+
+.color-r {
+  color: $redd !important;
+}
+
+.color-y {
+  color: $yellow !important;
+}
+
+.color-b {
+  color: $blue !important;
+}
+
+.before {
+  position: relative;
+  padding-top: px2vw(10);
+
+  @include lg{
+    padding-top: 15px !important;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    background: url('../img/title-i.svg') left center/contain no-repeat;
+    display: block;
+    width: px2vw(78);
+    height: px2vw(7);
+
+    @include lg{
+      width: 80px;
+      height: 9px;
+    }
+  }
+}
+
+.def{
+  &:before {
+    content: none !important;
+  }
+}
+
+.str{
+  color: $black;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-block;
+
+  &:before {
+    content: ' ';
+    width: px2vw(10);
+    height: px2vw(10);
+    border-radius: 50%;
+    background: url("../img/s1-fr.svg") center/contain no-repeat;
+    display: inline-flex;
+    margin-right: px2vw(2);
+
+    @include lg{
+      width: 10px;
+      height: 10px;
+    }
+  }
+
+}
+
+span.dot{
+  &:before {
+    content: ' ';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: $redd;
+    display: inline-flex;
+    margin-right: px2vw(5);
+  }
+}
+
+.arr:before{
+  content: '';
+  position: absolute;
+  top: px2vw(2);
+  //transform: translateY(-50%);
+  left: px2vw(-15);
+  width: px2vw(6);
+  height: px2vw(10);
+  //margin: px2vw(3) 0;
+  display: inline-block;
+
+  @include lg{
+    width: 6px;
+    height: 10px;
+    left: -10px;
+    top: 4px;
+  }
+}
+
+
+ul {
+  list-style-type: none;
+}
+
+main {
+  overflow: hidden;
+}
+
+p:empty{
+  display: none;
+  &:before{content:none; }
+}

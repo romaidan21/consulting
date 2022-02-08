@@ -1,0 +1,46 @@
+a.button{
+  font-family: $u-medium;
+  font-size: px2vw(14);
+  display: inline-flex;
+  align-items: center;
+  transition: .3s ease;
+  will-change: opacity;
+
+  @include lg{
+  font-size: 16px;
+  }
+
+  &.black{
+    color: $black;
+    &:after{
+      background: url("../img/arr-b.svg") center/contain no-repeat;
+    }
+
+  }
+  &.white{
+    color: $white;
+    &:after{
+      background: url("../img/arr-w.svg") center/contain no-repeat;
+    }
+  }
+
+  &:after{
+    content: '';
+    width: 18px;
+    height: 16px;
+    display: block;
+    margin-left: 15px;
+    transition: .3s ease-out;
+    transform: translateX(0);
+    //will-change: transform;
+
+  }
+
+  &:hover{
+    opacity: .8;
+
+    &:after{
+      transform: translateX(25%);
+    }
+  }
+}

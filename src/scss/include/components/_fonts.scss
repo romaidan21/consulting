@@ -1,0 +1,87 @@
+@font-face {
+  font-family: 'NotoSans';
+  src: local('NotoSans'),
+  url('../fonts/NotoSans.woff2') format('woff2'),
+  url('../fonts/NotoSans.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NotoSans Bold';
+  src: local('NotoSans Bold'),
+  url('../fonts/NotoSans-Bold.woff2') format('woff2'),
+  url('../fonts/NotoSans-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Ubuntu Bold';
+  src: local('Ubuntu Bold'),
+  url('../fonts/Ubuntu-Bold.woff2') format('woff2'),
+  url('../fonts/Ubuntu-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ubuntu Regular';
+  src: local('Ubuntu Regular'),
+  url('../fonts/Ubuntu-Regular.woff2') format('woff2'),
+  url('../fonts/Ubuntu-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ubuntu Medium';
+  src: local('Ubuntu Medium'),
+  url('../fonts/Ubuntu-Medium.woff2') format('woff2'),
+  url('../fonts/Ubuntu-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ubuntu Light';
+  src: local('Ubuntu Light'),
+  url('../fonts/Ubuntu-Light.woff2') format('woff2'),
+  url('../fonts/Ubuntu-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+$u-light: "Ubuntu Light", sans-serif;
+$u-medium: "Ubuntu Medium", sans-serif;
+$u-regular: "Ubuntu Regular", sans-serif;
+$u-bold: "Ubuntu Bold", sans-serif;
+
+$ns: "NotoSans", sans-serif;
+$ns-bold: "NotoSans Bold", sans-serif;
+
+
+h1 {
+  font-family: $u-bold;
+  font-size: px2vw(30);
+  text-transform: uppercase;
+  margin: 0;
+  color: $black;
+
+  @include lg {
+    font-size: 32px;
+  }
+}
+
+h2 {
+  font-family: $u-bold;
+  font-size: px2vw(28);
+  margin: 0;
+  color: $black;
+
+  @include lg {
+    font-size: 30px;
+  }
+}

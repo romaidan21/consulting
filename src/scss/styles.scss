@@ -1,0 +1,40 @@
+// Vendor
+@import "normalize.css";
+
+// Mixins, variables, functions
+@import "include/sections/preloader";
+
+@import "include/components/functions";
+@import "include/components/variables";
+@import "include/components/mixins";
+@import "include/components/fonts";
+@import "include/components/buttons";
+
+
+// Layout
+@import "include/layout/header";
+@import "include/layout/section";
+@import "include/layout/form";
+@import "include/layout/footer";
+
+// Sections
+@import "include/sections/welcome";
+@import "include/sections/services";
+
+
+*,
+*:focus,
+*::before,
+*::after {
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+

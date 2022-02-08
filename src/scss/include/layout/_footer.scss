@@ -1,0 +1,75 @@
+footer{
+  padding: px2vw(100) 0;
+  background: #141F29;
+
+  @include md{
+    padding: 55px 0 45px; 
+  }
+}
+.footer{
+  display: flex;
+  flex-direction: column;
+
+  @include md{
+    padding: 0 11vw;
+  }
+
+  h1{
+    color: $white;
+    padding: px2vw(10) 0;
+  }
+
+  .contacts{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: px2vw(40);
+
+    @include lg{
+      margin-top: 40px;
+    }
+    a{
+      color: $white;
+      font-family: $u-light;
+      font-size: px2vw(15);
+      margin: 0 px2vw(20) px2vw(20) 0;
+      display: inline-flex;
+      align-items: center;
+      transition: .3s ease-out;
+
+      &:hover{
+        opacity: .5;
+      }
+
+      @include lg{
+        font-size: 16px;
+        margin-bottom: 25px;
+        display: flex;
+      }
+
+      &:before{
+        content: '';
+        display: block;
+        width: px2vw(22);
+        height: px2vw(22);
+        margin-right: px2vw(15);
+
+        @include lg{
+          width: 22px;
+          height: 22px;
+          margin-right: 15px;
+        }
+      }
+
+      &.addr:before{
+        background: url("../img/addr.svg") center/contain no-repeat;
+      }
+      &.tel:before{
+        background: url("../img/tel.svg") center/contain no-repeat;
+      }
+      &.email:before{
+        background: url("../img/mail.svg") center/contain no-repeat;
+      }
+    }
+  }
+}

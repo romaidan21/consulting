@@ -1,0 +1,488 @@
+.service-page {
+
+  .welcome__text {
+    width: px2vw(500);
+    min-width: 550px;
+
+    @include md{
+      width: 100%;
+      max-width: 500px;
+      min-width: auto;
+    }
+
+    h1 {
+      font-size: px2vw(24);
+      padding-top: px2vw(10);
+      margin-bottom: px2vw(20);
+      line-height: 120%;
+
+      @include lg{
+        font-size: 28px;
+        margin-bottom: 40px;
+      }
+      @include md{
+        font-size: 24px;
+
+        padding-right: 60px;
+      }
+    }
+
+    p{
+      font-family: $ns;
+      font-size: px2vw(13);
+      color: #939393;
+      line-height: 165%;
+      width: 100%;
+      margin-bottom: px2vw(40);
+
+      @include lg{
+        font-size: 15px;
+        margin-bottom: 25px;
+      }
+
+    }
+  }
+
+  .welcome__icon {
+    z-index: -1;
+
+    @include md{
+      top: 25%;
+      right: 5vw;
+    }
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .faq {
+    padding: 0;
+
+    .question {
+      border: none;
+      padding: 0;
+      margin-bottom: px2vw(20);
+
+      @include lg{
+        margin-bottom: 25px;
+      }
+
+      h2 {
+        cursor: default;
+        display: block;
+        position: relative;
+        padding-left: px2vw(25);
+        font-size: px2vw(15);
+        line-height: 140%;
+
+        @include lg{
+          font-size: 16px;
+          padding-left: 25px;
+        }
+
+
+        &:before {
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          height: px2vw(20);
+          background: url("../img/mark.svg") center/contain no-repeat;
+
+          @include lg{
+            height: 25px;
+          }
+
+        }
+
+
+        span {
+          font-size: px2vw(12);
+          color: #939393;
+          font-family: $u-light;
+          font-weight: 300;
+          text-transform: lowercase;
+
+          @include lg{
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+.service-content {
+  padding-top: px2vw(150);
+  padding-bottom: px2vw(150);
+
+  @include md{
+    padding: 100px 11vw 0;
+  }
+
+  .title {
+
+    .icons{
+      height: px2vw(34);
+
+      @include lg{
+        width: 110px;
+        height: 30px;
+        margin-bottom: 10px;
+      }
+    }
+
+
+    h2 {
+      display: inline-flex;
+      align-items: center;
+      position: relative;
+
+      @include lg{
+        padding-right: 45px;
+      }
+      @include md{
+        font-size: 25px;
+        padding-right: 25px;
+      }
+
+      span {
+        display: flex;
+        margin-left: px2vw(15);
+        height: px2vw(35);
+        width: px2vw(35);
+        @include svg;
+
+        @include lg{
+          width: 35px;
+          height: 35px;
+          position: absolute;
+          right: 0;
+          top: 50% ;
+          transform: translateY(-50%);
+        }
+        @include md{
+          right: -10px;
+        }
+      }
+    }
+
+    .desc{
+      font-family: $ns;
+      font-size: px2vw(13);
+      color: #939393;
+      line-height: 165%;
+      width: 100%;
+
+      @include lg{
+        font-size: 15px;
+      }
+    }
+
+  }
+
+  &__lists {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: px2vw(100);
+    padding-bottom: 0;
+
+    @include md{
+      padding: 60px 0 0;
+    }
+
+    .list {
+      width: 40%;
+      display: flex;
+      margin-bottom: px2vw(50);
+
+      @include md{
+        width: 100%;
+        margin-bottom: 25px;
+      }
+
+      .i {
+        width: px2vw(40);
+        height: px2vw(40);
+        @include svg;
+
+        @include lg{
+          width: 35px;
+          height: 35px;
+        }
+      }
+
+      p {
+        font-family: $u-medium;
+        font-size: px2vw(15);
+        margin-left: px2vw(30);
+        width: 80%;
+
+        @include lg{
+          font-size: 16px;
+          margin-left: 15px;
+        }
+
+        br{
+          @include md{
+            display: none;
+          }
+        }
+
+        span{
+          font-size: px2vw(12);
+          color: #939393;
+          font-family: $u-light;
+          font-weight: 300;
+          position: relative;
+
+          @include lg{
+            font-size: 15px;
+          }
+          @include md{
+            margin-top: 7px;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+.feature {
+  padding-top: px2vw(70);
+  padding-bottom: px2vw(50);
+
+  @include md{
+    padding: 100px 11vw 0;
+  }
+
+  h1 {
+    padding-top: px2vw(10);
+    margin-bottom: px2vw(80);
+
+    @include md{
+      margin-bottom: 40px;
+    }
+  }
+
+  .list {
+    display: flex;
+    align-items: center;
+    margin-bottom: px2vw(30);
+    width: px2vw(500);
+    padding: px2vw(25);
+    box-shadow: 0 4px 21px rgba(0, 0, 0, 0.06);
+    border-radius: px2vw(25);
+    background: $white;
+
+    @include lg{
+      padding: 25px 15px;
+      width: 100%;
+      max-width: 550px;
+      margin-bottom: 25px;
+    }
+
+    .i {
+      width: px2vw(45);
+      margin-right: px2vw(30);
+      display: inline-flex;
+      img{
+        width: 100%;
+      }
+
+      @include lg{
+        width: 40px;
+        margin-right: 20px;
+      }
+
+    }
+
+    p {
+      font-family: $u-medium;
+      font-size: px2vw(15);
+      width: 80%;
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: column;
+      @include lg{
+        font-size: 15px;
+      }
+
+
+
+      span{
+        font-size: px2vw(12);
+        color: #939393;
+        font-family: $u-light;
+        font-weight: 300;
+        position: relative;
+        text-transform: initial;
+
+        @include lg{
+          font-size: 15px;
+          margin-top: 7px;
+        }
+      }
+    }
+  }
+
+  .i-bg {
+    &-1 {
+      top: px2vw(100);
+      right: px2vw(155);
+    }
+
+    &-2 {
+      bottom: px2vw(140);
+      right: px2vw(280);
+      left: auto;
+    }
+  }
+
+  .s-icon-1 {
+    top: 5%;
+    right: auto;
+    left: 5%;
+    transform: rotate(-73deg);
+    z-index: -1;
+    min-height: 120px;
+    min-width: 120px;
+  }
+  .s-icon-2 {
+    top: 50%;
+    right: -2%;
+    left: auto;
+    z-index: -1;
+  }
+}
+
+
+
+.i-bg {
+  position: absolute;
+  width: px2vw(25);
+  height: px2vw(25);
+
+  &-1 {
+    background: url("../img/s3-fr.svg") center/contain no-repeat;
+    top: px2vw(150);
+    right: px2vw(50);
+  }
+
+  &-2 {
+    background: url("../img/s4-fr.svg") center/contain no-repeat;
+    bottom: px2vw(140);
+    left: px2vw(150);
+  }
+
+  &-3 {
+    background: url("../img/s2-fr.svg") center/contain no-repeat;
+    bottom: px2vw(50);
+    left: px2vw(50);
+  }
+
+  &-4 {
+    background: url("../img/s1-fr.svg") center/contain no-repeat;
+    bottom: px2vw(50);
+    right: px2vw(100);
+  }
+
+}
+
+.s-icon {
+  position: absolute;
+
+  &-1 {
+    width: px2vw(200);
+    height: px2vw(240);
+    transform: rotate(-73deg);
+    right: -6%;
+    top: 50%;
+    opacity: .05;
+  }
+
+  &-2 {
+    width: px2vw(70);
+    height: px2vw(70);
+    transform: rotate(-65deg);
+    bottom: px2vw(150);
+    left: px2vw(-25);
+
+  }
+}
+
+
+.service-one{
+  .s-icon, .sent-pop-up .close{
+    background: url("../img/s1-fr.svg") center/contain no-repeat;
+  }
+  .service-content .title .icons{
+    background: url("../img/icons-1.svg") center/contain no-repeat;
+  }
+  .arr:before{
+    background: url("../img/tick-p.svg") center/contain no-repeat;
+  }
+  span svg path{
+    fill: $purple;
+  }
+  .wpcf7-submit{
+    background: $purple;
+  }
+
+}
+
+.service-two{
+  .s-icon, .sent-pop-up .close{
+    background: url("../img/s2-fr.svg") center/contain no-repeat;
+  }
+  .arr:before{
+    background: url("../img/tick-r.svg") center/contain no-repeat;
+  }
+  .service-content .title .icons{
+    background: url("../img/icons-2.svg") center/contain no-repeat;
+  }
+  span svg path{
+    fill: $redd;
+  }
+  .wpcf7-submit{
+    background: $redd;
+  }
+}
+
+.service-three{
+  .s-icon, .sent-pop-up .close{
+    background: url("../img/s3-fr.svg") center/contain no-repeat;
+  }
+  .arr:before{
+    background: url("../img/tick-y.svg") center/contain no-repeat;
+  }
+  .service-content .title .icons{
+    background: url("../img/icons-3.svg") center/contain no-repeat;
+  }
+  span svg path{
+    fill: $yellow;
+  }
+  .wpcf7-submit{
+    background: $yellow;
+  }
+}
+
+.service-four{
+  .s-icon, .sent-pop-up .close{
+    background: url("../img/s4-fr.svg") center/contain no-repeat;
+  }
+  .service-content .title .icons{
+    background: url("../img/icons-4.svg") center/contain no-repeat;
+  }
+  span svg path{
+    fill: $blue;
+  }
+  .wpcf7-submit{
+    background: $blue;
+  }
+}

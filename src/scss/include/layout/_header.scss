@@ -10,6 +10,7 @@
   background: $white;
   transition: box-shadow .5s ease;
   box-shadow: none;
+  display: none !important;
 
   &.scrolled{
     box-shadow: 0 px2vw(2) px2vw(8) rgba(0, 0, 0, 0.08);

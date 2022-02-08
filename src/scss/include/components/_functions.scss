@@ -1,7 +1,7 @@
 // Convert px to vw
 @function px2vw($px) {
   // Default viewport width
-  $def_screen: 1440;
+  $def_screen: 1920;
   $vw: $def_screen * 0.01;
   @return ($px / $vw) * 1vw;
 }
